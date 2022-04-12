@@ -1,9 +1,11 @@
-// TODO: Include packages needed for this application
+// Include packages needed for this application
+// === Note: Make sure to install initializer using "npm i" command in terminal ===
+
 const fs = require("fs");
 var inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
-// TODO: Create an array of questions for user input
+// Create an array of questions for user input
 const questions = [
   {
     type: "input",
@@ -28,13 +30,18 @@ const questions = [
   {
     type: "input",
     name: "steps",
-    message: "what steps are required to install and use this application?",
+    message: "What does someone need to install this project?",
   },
   {
     type: "input",
-    name: "licenses",
-    message:
-      "what licenses and/or third-party assets were used while building this project?",
+    name: "usage",
+    message: "How does someone use this project?",
+  },
+  {
+    type: "list",
+    name: "license",
+    message:"what licenses and/or third-party assets were used while building this project?",
+    choices: ['MIT', 'Apache License 2.0', 'BSD', 'GPL', 'Mozilla Public License 2.0' ]
   },
   {
     type: "input",
@@ -45,10 +52,25 @@ const questions = [
     type: "input",
     name: "credits",
     message: "Was there anyone in particular that helped with this project?",
+  },
+  {
+    type: "input",
+    name: "username",
+    message: "What is your github username?"
+  },
+  {
+    type: "input",
+    name: "email",
+    message: "What is your email?"
+  },
+  {
+    type: "input",
+    name: "tests",
+    message: "What tests did you run for this application?"
   }
 ];
 
-// TODO: Create a function to write README file
+// Create a function to write README file
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, data, (err) => {
     if (err) {
@@ -58,7 +80,7 @@ function writeToFile(fileName, data) {
   });
 }
 
-// TODO: Create a function to initialize app
+//Create a function to initialize app
 function init() {
   inquirer
     .prompt(questions)
