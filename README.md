@@ -1,5 +1,3 @@
-# README_Generator
-
 # Project: README Generator
   
   ## Description 
