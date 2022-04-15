@@ -41,7 +41,8 @@ const questions = [
     type: "list",
     name: "license",
     message:"what licenses and/or third-party assets were used while building this project?",
-    choices: ['MIT', 'Apache License 2.0', 'BSD', 'GPL', 'Mozilla Public License 2.0' ]
+    choices: ['MIT', 'Apache License 2.0', 'BSD', 'GPL', 'Mozilla', 'GNU', 'none'],
+    default: ['MIT']
   },
   {
     type: "input",

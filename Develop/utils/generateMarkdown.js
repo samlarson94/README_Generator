@@ -1,13 +1,11 @@
 // Create a function that returns a license badge based on which license is passed in
   //Shields.io used for quality metadata badges
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {
-
-}
-
+// license = `${data.license}`;
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
@@ -18,9 +16,7 @@ function generateMarkdown(data) {
   return `
   # Project: ${data.title}
   
-  [![alt-text](image-url)](url-to-point-to)
-  
-  ## Description
+  ## Description 
   - ${data.motivation}
   - ${data.problem}
   - ${data.learnings}
@@ -28,32 +24,35 @@ function generateMarkdown(data) {
   ##Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Credits] (#credits)
-  - [License] (#license)
-  - [Badges] (#badges)
+  - [Credits](#credits)
+  - [License](#license)
+  - [Contribute](#contribute)
+  - [Tests](#tests)
+  - [Badges](#badges)
+  - [Contact Me](#questions)
 
-  ## Installation
+  ## Installation <a name="installation"></a>
   - ${data.steps}
 
-  ## Usage Information
+  ## Usage <a name="usage"></a>
   - ${data.usage}
 
-  ## Contributing
+  ## Contributing <a name="credits"></a>
   - ${data.credits}
 
-  ## License
-  - ${data.license} //Currently undefined.  What type of data is select
+  ## License <a name="license"></a>
+  - ${data.license}
   
-  ## How to Contribute
+  ## How to Contribute <a name="constribute"></a>
   - ${data.contribute}
 
-  ## Tests
+  ## Tests <a name="tests"></a>
   - ${data.tests}
 
-  ## Questions
+  ## Contact Me <a name="questions"></a>
   - Feel free to reach out with any questions
-  - Github Profile: [${data.username}] (https://github.com/${data.username})
-  - Email: [${data.email}@gmail.com] (mailto:${data.email}@gmail.com)
+  - Github Profile: [${data.username}](https://github.com/${data.username})
+  - Email: [${data.email}](mailto:${data.email})
 
 `;
 }
