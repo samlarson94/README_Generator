@@ -5,7 +5,7 @@
   - Helps fellow devs generate quality README files for their project
   - Through this project, I learned a lot about Node.js and Markdown syntax
 
-  ##Table of Contents
+  ## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
   - [Credits](#credits)
